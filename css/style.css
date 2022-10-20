@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.login {
+  margin-top: 200px;
+}
+.login form {
+  background-color: whitesmoke;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 1px black;
+}
+
+.functionCards {
+  padding: 50px;
+  background-color: whitesmoke;
+  margin: 20px;
+  border-radius: 30px;
+}
+.functionCards a {
+  text-decoration: none;
+}
+
+.container-fluid {
+  margin-top: 21vh;
+  margin-bottom: 21vh;
+}
+
+footer {
+  padding: 15px;
+}/*# sourceMappingURL=style.css.map */
