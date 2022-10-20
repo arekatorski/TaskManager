@@ -10,7 +10,7 @@
 </head>
 <body>
 <nav class="navbar bg-light">
-  <div class="container-fluid">
+  <div class="container">
     <span class="navbar-brand mb-0 h1">Task Manager</span>
   </div>
 </nav>

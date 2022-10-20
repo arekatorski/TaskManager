@@ -1,5 +1,5 @@
 <?php
-require('../views/adminNav.php');
+require('../views/adminNav.html');
 ?>
 
 <div class="container text-center">
@@ -108,5 +108,5 @@ require('../views/adminNav.php');
 </div>
 
 <?php
-require("../views/footer.php");
+require("../views/footer.html");
 ?>
