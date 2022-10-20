@@ -8,10 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
 </head>
-<body>
-<nav class="navbar bg-light">
+<body class="bg-dark">
+<nav class="navbar bg-dark">
   <div class="container">
-    <span class="navbar-brand mb-0 h1">Task Manager</span>
+    <span class="navbar-brand mb-0 h1 text-white">Task Manager</span>
   </div>
 </nav>
 <div class="container login">
@@ -32,7 +32,7 @@
         </div>
         <div class="col-md-4 align-items-center">
             <form>
-                <p class="h1">Register</p>
+                <p class="h1">Register</p><p>(actually disabled)</p>
                 <div class="form-group">
                     <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"><br>
                 </div>
@@ -42,7 +42,7 @@
                 <div class="form-group">
                     <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Repeat Password">
                 </div></br>
-                <button type="submit" class="btn btn-dark">Register</button>
+                <button type="submit" class="btn btn-dark" disabled>Register</button>
          </form>
         </div>
     </div>

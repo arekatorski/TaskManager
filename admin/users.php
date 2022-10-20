@@ -11,7 +11,7 @@ require('../views/adminNav.html');
    <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8">
-    <table class="table">
+    <table class="table table-dark">
   <thead>
     <tr>
       <th scope="col">ID PRACOWNIKA</th>
@@ -21,85 +21,20 @@ require('../views/adminNav.html');
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr><tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr><tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr><tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr><tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr><tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr><tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr><tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr><tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr><tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr><tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr><tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    <?php
+      $conn = new mysqli('localhost', 'root', '', 'taskmanager');
+     if($conn->connect_error){
+      die("NIE NAWIĄZANO POŁĄCZENIA Z BAZĄ DANYCH");
+     }
+     $query = "SELECT * from users where accountId = 2";
+     $result = $conn->query($query);
+      if($result->num_rows >0){
+        while($row = $result->fetch_assoc()){
+          echo "<tr><td>".$row['id']."</td><td>".$row['name']."</td><td>"
+          .$row['surname']."</td><td>".$row['email']."</td></tr>";
+        }
+      }
+    ?>
   </tbody>
 </table>
     </div>

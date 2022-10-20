@@ -7,7 +7,7 @@ require('../views/adminNav.html');
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <p class="h2">Lista zadań przypisanych</p>
-        <table class="table">
+        <table class="table table-dark">
             <thead>
                 <tr>
                     <th scope="col">ID ZADANIA</th>
@@ -18,13 +18,22 @@ require('../views/adminNav.html');
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <th scope="row">3</th>
-                    <td>Stwórz aplikację</td>
-                    <td>Andrzej Duduś</td>
-                    <td>1999-09-12</td>
-                    <td>W TRAKCIE REALIZACJI</td>
-                </tr>
+               <?php
+                    $conn = new mysqli('localhost', 'root', '', 'taskmanager');
+                    if($conn->connect_error){
+                        die("NIE NAWIĄZANO POŁĄCZENIA Z BAZĄ DANYCH");
+                    }
+                    $query = "SELECT users.name, users.surname, tasks.id, tasks.title, tasks.deadline, tasks.status FROM tasks, users WHERE tasks.userId = users.id";
+                    $result = $conn->query($query);
+
+                    if($result->num_rows >0){
+                        while($row = $result->fetch_assoc()){
+                            echo "<tr><td>".$row['id']."</td><td>".$row['title']."</td><td>"
+                            .$row['name']." ".$row['surname']."</td><td>".$row['deadline']
+                            ."</td><td>".$row['status']."</td></tr>";
+                        }
+                    }
+               ?>
             </tbody>
             </table>
         </div>
