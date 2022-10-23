@@ -8,18 +8,6 @@ body {
 .login {
   margin-top: 200px;
 }
-.login form {
-  background-color: #343a40;
-  padding: 30px;
-  border-radius: 30px;
-  box-shadow: 1px black;
-}
-.login form input {
-  background-color: #212529;
-}
-.login form input:focus {
-  background-color: #343a40;
-}
 
 .functionCards {
   padding: 50px;
@@ -46,4 +34,17 @@ a {
 
 footer {
   padding: 15px;
+}
+
+form {
+  background-color: #343a40;
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 1px black;
+}
+form input {
+  background-color: #212529;
+}
+form input:focus {
+  background-color: #343a40;
 }/*# sourceMappingURL=style.css.map */
